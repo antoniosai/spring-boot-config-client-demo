@@ -1,0 +1,16 @@
+
+spring:
+  profiles:
+    active: prod
+  application:
+    name: app_test
+  output:
+    ansi:
+      enabled: ALWAYS
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      fail-fast: true
+      uri: http://localhost:8000
+      enabled: true
